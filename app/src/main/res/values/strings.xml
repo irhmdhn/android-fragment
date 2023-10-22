@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">Fragment</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="prodi">
+        <item>D3 Teknik Informatika</item>
+        <item>D3 Manajemen Informatika</item>
+        <item>S1 Informatika</item>
+        <item>S1 Sistem Informasi</item>
+        <item>S1 Teknologi Informasi</item>
+        <item>S1 Teknik Komputer</item>
+    </string-array>
 </resources>

@@ -9,35 +9,35 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity {
+public class MainAnggotaActivity extends AppCompatActivity {
 
-    Button btnFragment1, btnFragment2;
+    Button btnEdit, btnKartu;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main_anggota);
 
-        btnFragment1 = findViewById(R.id.btnFragment1);
-        btnFragment2 = findViewById(R.id.btnFragment2);
+        btnEdit = findViewById(R.id.btnEdit);
+        btnKartu = findViewById(R.id.btnKartu);
 
-        btnFragment1.setOnClickListener(new View.OnClickListener() {
+        btnEdit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                loadFragment(new FirstFragment());
+                loadFragment(new AnggotaInputFragment());
             }
         });
-        btnFragment2.setOnClickListener(new View.OnClickListener() {
+        btnKartu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                loadFragment(new SecondFragment());
+                loadFragment(new AnggotaShowFragment());
             }
         });
     }
     private void loadFragment(Fragment fragment){
         FragmentManager manager = getSupportFragmentManager();
         FragmentTransaction transaction = manager.beginTransaction();
-        transaction.replace(R.id.containerFragment, fragment);
+        transaction.replace(R.id.container, fragment);
         transaction.commit();
     }
-
+    }
 }

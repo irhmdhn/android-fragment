@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ImplicitActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="16dp">
+        <EditText
+            android:id="@+id/etTelp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="phone"
+            android:hint="No. Telp"
+            android:textColor="@color/black" />
+        <Button
+            android:id="@+id/btnDialpad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Dialpad"
+            android:textColor="@color/white"/>
+        <Button
+            android:id="@+id/btnContact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Kontak"
+            android:textColor="@color/white"/>
+        <Button
+            android:id="@+id/btnCamera"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Kamera"
+            android:textColor="@color/white"/>
+        <Button
+            android:id="@+id/btnGalery"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Galeri"
+            android:textColor="@color/white"/>
+        <Button
+            android:id="@+id/btnBrowser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Browser"
+            android:textColor="@color/white"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

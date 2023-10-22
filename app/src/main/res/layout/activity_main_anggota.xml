@@ -4,34 +4,30 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
-
+    tools:context=".MainAnggotaActivity">
     <FrameLayout
-        android:id="@+id/containerFragment"
+        android:id="@+id/container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"></FrameLayout>
-
     <Button
-        android:id="@+id/btnFragment1"
+        android:id="@+id/btnEdit"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Fragment 1"
+        android:text="Edit profil"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btnFragment2" />
+        app:layout_constraintEnd_toStartOf="@+id/btnKartu"/>
 
     <Button
-        android:id="@+id/btnFragment2"
+        android:id="@+id/btnKartu"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Fragment 2"
+        android:text="Kartu anggota"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btnFragment1" />
-
+        app:layout_constraintStart_toEndOf="@+id/btnEdit" />
 </androidx.constraintlayout.widget.ConstraintLayout>
