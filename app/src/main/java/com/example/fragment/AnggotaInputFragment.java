@@ -3,10 +3,14 @@ package com.example.fragment;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Spinner;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -24,9 +28,11 @@ public class AnggotaInputFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
+
     public AnggotaInputFragment() {
         // Required empty public constructor
     }
+
 
     /**
      * Use this factory method to create a new instance of
@@ -54,13 +60,45 @@ public class AnggotaInputFragment extends Fragment {
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
     }
-
+    EditText inputNama, inputNim, inputProdi, inputEmail, inputTelp;
+    Button btnSimpan;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_anggota_input, container, false);
-    }
+        View view = inflater.inflate(R.layout.fragment_anggota_input, container, false);
+        inputNama = view.findViewById(R.id.inputNama);
+        inputNim = view.findViewById(R.id.inputNim);
+        inputProdi = view.findViewById(R.id.inputProdi);
+        inputEmail = view.findViewById(R.id.inputEmail);
+        inputTelp = view.findViewById(R.id.inputTelp);
+        btnSimpan = view.findViewById(R.id.btnSimpan);
 
+        btnSimpan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String nama = inputNama.getText().toString();
+                String nim = inputNim.getText().toString();
+                String prodi = inputProdi.getText().toString();
+                String email = inputEmail.getText().toString();
+                String telp = inputTelp.getText().toString();
+
+                AnggotaShowFragment anggotaShow = new AnggotaShowFragment();
+                Bundle bundle = new Bundle();
+                bundle.putString("nama", nama);
+                bundle.putString("nim", nim);
+                bundle.putString("prodi", prodi);
+                bundle.putString("email", email);
+                bundle.putString("telp", telp);
+                anggotaShow.setArguments(bundle);
+
+                FragmentTransaction transaction = getParentFragmentManager().beginTransaction();
+                transaction.replace(R.id.containerData, anggotaShow);
+                transaction.addToBackStack(null);
+                transaction.commit();
+            }
+        });
+        return view;
+    }
 
 }

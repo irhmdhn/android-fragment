@@ -36,8 +36,8 @@ public class MainAnggotaActivity extends AppCompatActivity {
     private void loadFragment(Fragment fragment){
         FragmentManager manager = getSupportFragmentManager();
         FragmentTransaction transaction = manager.beginTransaction();
-        transaction.replace(R.id.container, fragment);
+        transaction.replace(R.id.containerData, fragment);
         transaction.commit();
     }
-    }
+
 }

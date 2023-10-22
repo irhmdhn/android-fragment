@@ -55,12 +55,19 @@
             android:text="Program studi"
             android:layout_marginVertical="4dp"
             android:textSize="16sp"/>
-        <Spinner
+        <EditText
             android:id="@+id/inputProdi"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:hint="S1 Informatika"
             android:layout_marginBottom="8dp"
-            android:entries="@array/prodi"/>
+            android:inputType="text"/>
+<!--        <Spinner-->
+<!--            android:id="@+id/inputProdi"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginBottom="8dp"-->
+<!--            android:entries="@array/prodi"/>-->
 
         <TextView
             android:layout_width="match_parent"

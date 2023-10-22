@@ -6,9 +6,87 @@
     tools:context=".AnggotaShowFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_margin="12dp"
+        android:orientation="vertical"
+>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#9C27B0"
+            android:padding="12dp"
+
+            >
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp"
+            android:text="KARTU ANGGOTA"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:id="@+id/tvNama"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="4dp"
+            android:text="Nama"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:layout_below="@id/title"
+            />
+
+
+        <TextView
+            android:id="@+id/tvNim"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="4dp"
+            android:text="NIM"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:layout_below="@id/tvNama" />
+
+
+        <TextView
+            android:id="@+id/tvProdi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="4dp"
+            android:text="Program studi"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:layout_below="@id/tvNim"/>
+
+        <TextView
+            android:id="@+id/tvEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="4dp"
+            android:text="Email"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:layout_below="@id/tvProdi"/>
+
+        <TextView
+            android:id="@+id/tvTelp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="4dp"
+            android:text="No. Telp"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:layout_below="@id/tvEmail"/>
+        </RelativeLayout>
+    </LinearLayout>
+
 
 </FrameLayout>
