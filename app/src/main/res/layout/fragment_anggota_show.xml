@@ -11,80 +11,135 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="12dp"
+        android:layout_margin="32dp"
         android:orientation="vertical"
 >
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="#9C27B0"
-            android:padding="12dp"
+            android:background="@drawable/bg"
+            android:padding="24dp">
 
-            >
-        <TextView
+            <TextView
             android:id="@+id/title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="32dp"
             android:text="KARTU ANGGOTA"
             android:textAlignment="center"
-            android:textColor="@color/white"
+            android:textColor="@color/lightGray"
             android:textSize="20sp"
             android:textStyle="bold"
             />
+            <ImageView
+                android:id="@+id/img"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_avatar"
+                android:layout_marginVertical="16dp"
+                android:layout_below="@id/title"
+                />
+            <TextView
+                android:id="@+id/tvNama"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ihwannudin Rahmadhani"
+                android:textAllCaps="true"
+                android:textAlignment="center"
+                android:textColor="@color/red"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_below="@id/img"
+                />
 
-        <TextView
-            android:id="@+id/tvNama"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginVertical="4dp"
-            android:text="Nama"
-            android:textColor="@color/white"
-            android:textSize="16sp"
-            android:layout_below="@id/title"
-            />
+            <TextView
+                android:id="@+id/tvNim"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="21.21.2121"
+                android:layout_marginBottom="24dp"
+                android:textAlignment="center"
+                android:textColor="@color/gray"
+                android:textSize="12sp"
+                android:layout_below="@id/tvNama"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_below="@id/tvNim">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginEnd="8dp"
+                    android:layout_below="@id/tvNim">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="2dp"
+                        android:text="Prodi:"
+                        android:textColor="@color/gray"
+                        android:textStyle="bold"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="2dp"
+                        android:text="Email:"
+                        android:textColor="@color/gray"
+                        android:textStyle="bold"
+                        android:textSize="12sp"
+                        android:layout_below="@id/tvProdi"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="2dp"
+                        android:text="Telp:"
+                        android:textColor="@color/gray"
+                        android:textStyle="bold"
+                        android:textSize="12sp"
+                        android:layout_below="@id/tvEmail"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+                    <TextView
+                        android:id="@+id/tvProdi"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="2dp"
+                        android:text="D3 Teknik Informatika"
+                        android:textColor="@color/gray"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tvEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="2dp"
+                        android:text="rama@students.amikom.ac.id"
+                        android:textColor="@color/gray"
+                        android:textSize="12sp"
+                        android:layout_below="@id/tvProdi"/>
+
+                    <TextView
+                        android:id="@+id/tvTelp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="2dp"
+                        android:text="0852252525"
+                        android:textColor="@color/gray"
+                        android:textSize="12sp"
+                        android:layout_below="@id/tvEmail"/>
+                </LinearLayout>
+            </LinearLayout>
 
 
-        <TextView
-            android:id="@+id/tvNim"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginVertical="4dp"
-            android:text="NIM"
-            android:textColor="@color/white"
-            android:textSize="16sp"
-            android:layout_below="@id/tvNama" />
-
-
-        <TextView
-            android:id="@+id/tvProdi"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginVertical="4dp"
-            android:text="Program studi"
-            android:textColor="@color/white"
-            android:textSize="16sp"
-            android:layout_below="@id/tvNim"/>
-
-        <TextView
-            android:id="@+id/tvEmail"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginVertical="4dp"
-            android:text="Email"
-            android:textColor="@color/white"
-            android:textSize="16sp"
-            android:layout_below="@id/tvProdi"/>
-
-        <TextView
-            android:id="@+id/tvTelp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginVertical="4dp"
-            android:text="No. Telp"
-            android:textColor="@color/white"
-            android:textSize="16sp"
-            android:layout_below="@id/tvEmail"/>
         </RelativeLayout>
     </LinearLayout>
 
